@@ -1,0 +1,198 @@
+Tableau Sales & Performance Dashboard
+Project Overview
+
+Companies accumulate large amounts of business data such as sales, returns, customers, products, and customer satisfaction. When analyzed correctly, this data provides valuable insights into business performance and supports strategic decision-making.
+
+This project uses Tableau to connect multiple data sources, define key performance indicators (KPIs), and build an interactive dashboard that allows users to analyze sales, profitability, customer behavior, and satisfaction.
+
+Project Objectives
+
+The objectives of this project are to:
+
+Import and connect multiple data sources
+
+Clean and prepare data for analysis
+
+Create hierarchies and grouped dimensions
+
+Build interactive and meaningful visualizations
+
+Design a final dashboard driven by KPIs
+
+Use calculated fields and parameters to enrich analysis
+
+Data Import and Modeling
+Data Connections
+
+The following physical joins are applied in Tableau:
+
+LEFT JOIN: Purchases to Reviews
+
+LEFT JOIN: Purchases to Returns
+
+INNER JOIN: Purchases to People
+
+A logical relationship is created between Purchases and Evaluations to preserve order-level granularity (for example, average customer satisfaction per order).
+
+Measure Formatting
+
+Default formats are defined as follows:
+
+Sales: Currency
+
+Profit: Currency
+
+Quantity: Integer
+
+Customer Satisfaction: Percentage or integer
+
+Hierarchies and Groupings
+
+The following hierarchies are created:
+
+Product Hierarchy
+
+Category
+
+Subcategory
+
+Product Name
+
+Geography Hierarchy
+
+Country
+
+Region
+
+City
+
+Subcategory values are grouped where necessary to simplify analysis and improve dashboard readability.
+
+Basic Visualizations
+
+The project includes the following visualizations:
+
+Sales by Subcategory with reference labels
+
+Sales by Segment
+
+Quantity by Product Hierarchy
+
+Customer Satisfaction per Order (using logical relationships or LOD expressions if required)
+
+Sales over Time with day, month, and year granularity
+
+Data refreshes are performed to ensure responsiveness and accuracy.
+
+Advanced Visualizations and Interactivity
+
+Advanced charts and interactions include:
+
+Map showing Sales by Country or Region
+
+Bubble Chart showing Sales by Segment
+
+Interactive Filters:
+
+Country
+
+Date
+
+Quantity
+
+Segment
+
+Graph Matrix (Small Multiples): Segment by Region by Subcategory
+
+Mirror Chart (multi-measure comparison)
+
+Dual-Axis Chart comparing Sales and Quantity
+
+Reference Lines displaying targets or objectives per partition
+
+Tables and Reporting
+
+The following tables are created:
+
+Simple table with Category, selling price, and total sales
+
+Multidimensional table with multiple dimensions in rows and columns
+
+Conditional formatting (for example, sales below target highlighted in red)
+
+Pivot table to analyze intersections
+
+Multi-measure table displaying several KPIs side by side
+
+Calculations and Parameters
+Profit Percentage Calculation
+
+A calculated field is created to represent profit as a percentage of sales:
+
+Profit Percentage = Profit / Sales
+
+Conditional Eco-Tax Calculation
+
+A calculated field applies a 5% eco-tax under the following conditions:
+
+Applies only to products in the technology category
+
+Does not apply if the product name indicates it is recycled
+
+Products outside this category are excluded from the calculation
+
+Low Sales Flag (Discrete Measure)
+
+A Boolean calculated field is created to identify low sales:
+
+TRUE if total sales are less than 1000
+
+FALSE otherwise
+
+This field is used for conditional formatting or filtering.
+
+Dynamic Profit Parameter
+
+A parameter named "% Profit Increase" is created and displayed in the dashboard.
+
+This parameter is used in a calculated field to compute adjusted profit:
+
+Adjusted Profit = Profit * (1 + % Profit Increase)
+
+The value changes dynamically based on user input.
+
+Final Dashboard
+
+The final dashboard includes the most relevant visualizations and KPIs:
+
+Interactive filters and parameters
+
+Clear titles, legends, and consistent color usage
+
+Optimized layout for readability
+
+Fully tested interactivity
+
+The dashboard supports both high-level monitoring and detailed analysis.
+
+Project Organization
+
+Work Mode: Individual
+Duration: 5 working days
+Period: From 26/01/2026 to 30/01/2026 before midnight
+
+Recommended Tools:
+
+Tableau Desktop
+
+Tableau Public
+
+Tableau Online
+
+If you want, I can also:
+
+Shorten it for a one-page README
+
+Add a KPI dictionary (definition + formula)
+
+Rewrite it for academic submission or professional portfolio
